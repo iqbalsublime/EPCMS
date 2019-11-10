@@ -22,5 +22,5 @@ class Customer:
     def description(self):
         return "{}'s Mobile: {}".format(self.name, self.mobile)
 
-cust1= Customer(1,"Iqbal", "01671998671")
+cust1= Customer(1,"Iqbal", "0167****671")
 #print(cust1.description())
