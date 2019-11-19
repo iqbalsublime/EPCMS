@@ -2,7 +2,7 @@
 """
 Created on Sun Nov 10 22:25:25 2019
 
-@author: ASUS
+@author: iqbalsublime
 """
 
 class Restaurent:
