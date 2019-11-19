@@ -21,7 +21,16 @@ print("Reserve ID:{}, Date: {} Customer Name: {}, Mobile:{}, Branch: {}".format(
 
 
 menu1= Menu(1,"Burger", 160,"Fast Food")
-order1= Order(1,"20-11-2019", cust1,menu1)
+menu2= Menu(2,"Pizza", 560,"Fast Food")
+menu3= Menu(3,"Biriani", 220,"Indian")
+menu4= Menu(4,"Pitha", 50,"Bangla")
+
+orderMenu=[]
+orderMenu.extend(menu1)
+orderMenu.extend(menu2)
+orderMenu.extend(menu3)
+orderMenu.extend(menu4)
+order1= Order(1,"20-11-2019", cust1,orderMenu)
 
 print("Order ID:{}, Date: {} Customer Name: {}, Mobile:{}, Menu: {}, Price: {}, Type: {}".format(order1.oid, 
-      order1.date, order1.Customer.name, order1.Customer.mobile, order1.Menu.name, order1.Menu.price, order1.Menu.category))
+      order1.date, order1.Customer.name, order1.Customer.mobile, order1.Menu[1].name, order1.Menu[1].price, order1.Menu[1].category))

@@ -7,10 +7,11 @@ Created on Wed Nov 20 02:24:12 2019
 
 
 class Menu:
-
-
+    CAT = ('Fast Food', 'Bangla', 'Indian', 'Misc')
     # Initializer / Instance Attributes
     def __init__(self, mid, name, price, category):
+        if category not in self.CAT:
+            raise ValueError("%s is not a valid category." % category)
         self.mid = mid
         self.name = name
         self.price = price
