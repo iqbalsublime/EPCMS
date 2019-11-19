@@ -23,5 +23,5 @@ print("Reserve ID:{}, Date: {} Customer Name: {}, Mobile:{}, Branch: {}".format(
 menu1= Menu(1,"Burger", 160,"Fast Food")
 order1= Order(1,"20-11-2019", cust1,menu1)
 
-print("Order ID:{}, Date: {} Customer Name: {}, Mobile:{}, Menu: {}, Price: {}".format(order1.oid, 
-      order1.date, order1.Customer.name, order1.Customer.mobile, order1.Menu.name, order1.Menu.price))
+print("Order ID:{}, Date: {} Customer Name: {}, Mobile:{}, Menu: {}, Price: {}, Type: {}".format(order1.oid, 
+      order1.date, order1.Customer.name, order1.Customer.mobile, order1.Menu.name, order1.Menu.price, order1.Menu.category))
