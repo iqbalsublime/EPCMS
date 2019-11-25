@@ -9,12 +9,14 @@ class Order:
 
 
     # Initializer / Instance Attributes
-    def __init__(self, oid,date, Customer, Menu):
+    def __init__(self, oid,date, Customer):
         self.oid = oid
         self.date = date
         self.Customer = Customer
-        self.Menu = Menu
+        self.menus = []
 
+    def addMenu(self, menu):
+        self.menus.append(menu)
 
-order1= Order(1,"20-11-2019", 160,"Fast Food")
+#order1= Order(1,"20-11-2019", 160,"Fast Food")
 #print(rest1.description())
