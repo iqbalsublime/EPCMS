@@ -48,7 +48,7 @@ def reserveRestaurent():
     
     print("******Reservation*******")
     print("Reserve ID:{}, Date: {} Customer Name: {}, Mobile:{}, Branch: {}".format(reserve1.reserveid, 
-          reserve1.date, reserve1.customer.name, reserve1.customer.mobile, reserve1.restaurent.bname))
+          reserve1.date.strftime("%c"), reserve1.customer.name, reserve1.customer.mobile, reserve1.restaurent.bname))
     #print(reserve1.description())
     print("******Reservation*******")
     
@@ -64,12 +64,17 @@ def orderFood():
     foodId=-1
     quantity=-1
     order1= Order(1,datetime.now(), customer)
-    print("--------Menu--------")
+    
+    print("Welcome", name,"\n")
+    
+    
+    print("Please select your food...\n")
+    
+    print("--------Menu--------\n")
         
-    print("Please select your menu")
     for menu in menus:
         
-        print("ID----Name-----Price")
+        print("ID--Name--Price")
         print(menu.mid, menu.name, menu.price)
     orderFlag=-1
     while(orderFlag !=0):
@@ -91,13 +96,14 @@ def orderFood():
         
     print("******Invoice*******")
     print("Order ID:{}, Date: {} Customer Name: {}, Mobile:{}".format(order1.oid, 
-          order1.date, order1.Customer.name, order1.Customer.mobile))
+          order1.date.strftime("%c"), order1.Customer.name, order1.Customer.mobile))
     totalBill=0.0
     serial=1
     print("SL---Food----Price---Qy----total") 
     for order in order1.menus:
         print(serial,order.name, order.price, order.quantity, (float(order.price)*float(order.quantity)))
         totalBill=float(totalBill)+(float(order.price)*float(order.quantity))
+        serial=serial+1
     print("Grand Total :", totalBill) 
     print("******Invoice*******")   
 
@@ -109,6 +115,8 @@ def main():
         reserveRestaurent()
     elif(int(option)==2):
         orderFood()
+    elif(int(option)==3):
+        print("Under developement...")   
     else:
         print("Please select right option")
         
